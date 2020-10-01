@@ -67,7 +67,7 @@ simu_logit_cov<-function(Risk,lambda=1,beta1=-5,n,p,p0,p1,seed,setD){
   
   
   ## Creating matricies for observed data under case control, incorporating resulting weights ##
-  vacdata <- cbind(data_ws,S, Y,PY)
+  vacdata <- cbind(data_ws, Y,PY)
   vacy1 <- vacdata[Y==1, ]
   vacy0 <- vacdata[Y==0, ]
   
@@ -140,7 +140,7 @@ simu_probit_cov<-function(Risk,beta1=-5,n,p,p0,p1,seed,setD){
   }
   
   ## Creating matricies for observed data under case control, incorporating resulting weights ##
-  vacdata <- cbind(data_ws,S, Y,PY)
+  vacdata <- cbind(data_ws, Y,PY)
   vacy1 <- vacdata[Y==1, ]
   vacy0 <- vacdata[Y==0, ]
   
@@ -195,7 +195,7 @@ simu_step<-function(Risk,n,p,p0,p1,seed,setD){
   Y=sapply(PY,function (x) rbern(1,prob=x))
   
   ## Creating matricies for observed data under case control, incorporating resulting weights ##
-  vacdata <- cbind(data_ws,S, Y,PY)
+  vacdata <- cbind(data_ws, Y,PY)
   vacy1 <- vacdata[Y==1, ]
   vacy0 <- vacdata[Y==0, ]
   
