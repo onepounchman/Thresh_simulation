@@ -9,7 +9,7 @@ simu<-function(Risk,p0,p1,cov,model){
   # cov: whether inclduing covariates and how to use covariates
   # model: for P(Y|S=v,W=w)
 #------------------------------------------------------------------------
-# output: 
+# output: A DAG subject
 #----------------------------------
   D<-generate_covariates()
   D<-generate_S(D,cov)
